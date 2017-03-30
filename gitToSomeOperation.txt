@@ -1,0 +1,55 @@
+https://git-for-windows.github.io   windows版本安装网址
+
+
+安装好以后  菜单-> git -> gitBash打开命令行
+
+
+git init 创建git库
+
+
+把相关的文件上传
+
+
+cd			进入相关的目录
+
+pwd			查看当前所在目录
+
+
+git add 文件名		将相关的文件添加到仓库（必须是存在的文件）
+git add 文件1 文件2 文件3  添加多多个文件
+
+
+git commit		把文件提交到仓库
+
+git commit -m "提交日志" 文件提交日志，方便查看做了什么事情
+
+git status		查看仓库当前的状态
+
+git diff 文件		查看文件修改的内容
+
+git log			查看提交日志
+
+git log --pretty=oneline 查看版本id
+
+$ git reset --hard HEAD^ 回到上一个版本（上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100）
+
+$ git reset --hard 3628164 后面的数子是id，回到id指定版本，删除的也可以
+
+cat 文件		查看文件内容
+
+git reflog		记录每一次命令
+
+git checkout		其实是版本库里的版本替换工作区的版本
+
+rm 文件			删除文件
+
+git rm 文件 -> git commit -m "信息" ： 从文本库中删除文件
+
+git 
+
+git push orgin master	orgin是添加的master
+
+ssh-keygen -t rsa	生成秘钥
+
+
+
