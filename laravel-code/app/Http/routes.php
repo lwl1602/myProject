@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*Route::get('test','IndexController@user');*/
+
+Route::get('at',['as'=>'user',function(){
+    echo route('user');
+    return "<h1>路由别名</h1>";
+}]);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

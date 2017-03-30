@@ -48,5 +48,11 @@
     },
     "config": {
         "preferred-install": "dist"
+    },
+    "repositories": {                       /*镜像*/
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }
