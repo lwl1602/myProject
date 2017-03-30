@@ -36,5 +36,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://E:/wamp/apps/phpsysinfo3.1.12/sample/distrotest/Pear" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://E:/wamp/apps/phpsysinfo3.1.12/sample/distrotest/Pear" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
