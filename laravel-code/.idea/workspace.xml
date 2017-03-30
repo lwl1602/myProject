@@ -2,11 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ced217df-79dd-46b0-9027-1f1f79b936f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/laravel-code.iml" afterPath="$PROJECT_DIR$/.idea/laravel-code.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/.env.example" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Console/Commands/Inspire.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Console/Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Events/Event.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Exceptions/Handler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Controllers/Auth/AuthController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Controllers/Auth/PasswordController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Controllers/Controller.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Middleware/Authenticate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Middleware/EncryptCookies.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Middleware/VerifyCsrfToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/Requests/Request.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Http/routes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Jobs/Job.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Listeners/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Policies/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Providers/AppServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Providers/AuthServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Providers/EventServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/Providers/RouteServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/app/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/artisan" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/bootstrap/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/bootstrap/autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/bootstrap/cache/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/app.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/broadcasting.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/cache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/compile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/filesystems.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/mail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/queue.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/services.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/session.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/config/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/factories/ModelFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/migrations/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/seeds/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/database/seeds/DatabaseSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/public/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/public/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/public/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/public/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/public/web.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/assets/sass/app.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/lang/en/auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/lang/en/pagination.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/lang/en/passwords.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/lang/en/validation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/views/errors/503.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/views/vendor/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/resources/views/welcome.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/server.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/app/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/app/public/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/framework/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/framework/cache/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/framework/sessions/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/framework/views/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/storage/logs/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/tests/ExampleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../laravel/tests/TestCase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../wechat" afterPath="" />
     </list>
     <ignored path="laravel-code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -173,10 +245,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="laravel-code">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -236,12 +304,12 @@
       <workItem from="1490860967612" duration="461000" />
       <workItem from="1490861444613" duration="231000" />
       <workItem from="1490883353512" duration="457000" />
-      <workItem from="1490883837884" duration="3056000" />
+      <workItem from="1490883837884" duration="3515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4205000" />
+    <option name="totallyTimeSpent" value="4664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="145" y="11" width="1356" height="760" extended-state="0" />
