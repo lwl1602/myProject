@@ -12,3 +12,5 @@ http://stackoverflow.com/   php中laravel框架问答网站
 https://www.laravist.com/ 学习网站
 
 http://www.codespu.com/vip/wx/ 微信公众号源码下载
+
+http://php.wysls.com/thread-4-1-2.html laravel博客视频
