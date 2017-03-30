@@ -1,0 +1,1 @@
+php artisan serve		开启laravel自带的服务器
