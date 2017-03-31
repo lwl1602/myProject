@@ -51,6 +51,10 @@ git push orgin master	orgin是添加的master
 
 ssh-keygen -t rsa	生成秘钥
 
+<<<<<<< HEAD
+git pull --rebase origin master		进行代码合并
+
+=======
 一、 Git 常用命令速查
 git branch 查看本地所有分支
 git status 查看当前状态 
@@ -205,5 +209,6 @@ git grep "delete from"                                    # 文件中搜索文本“dele
 git grep -e '#define' --and -e SORT_DIRENT 
 git gc 
 git fsck
+>>>>>>> 2055c5d1e8a6eca000991792c23f27cc76799696
 
 
