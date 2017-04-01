@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('admin/view', 'Admin\IndexController@view');
 
+Route::get('index', 'IndexController@index');
+
 /*Route::get('admin/test','admin\IndexController@index');*/
 
 /*Route::get('at',['as'=>'user',function(){
