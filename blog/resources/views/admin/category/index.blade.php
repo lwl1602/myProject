@@ -3,6 +3,7 @@
 @section('content')
     <!--面包屑导航 开始-->
     <div class="crumb_warp">
+
         <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
         <i class="fa fa-home"></i> <a href="{{ url('admin/info') }}">首页</a> &raquo;  全部分类
     </div>
@@ -33,11 +34,25 @@
     <!--搜索结果页面 列表 开始-->
     <form action="#" method="post">
         <div class="result_wrap">
+            <div class="result_title">
+                <h3>分类管理</h3>
+                @if(count($errors) > 0)
+                    <div class="mark">
+                        @if(is_object($errors))
+                            @foreach($errors->all() as $error)
+                                <p>{{ $error }}</p>
+                            @endforeach
+                        @else
+                            <p>{{ $errors }}</p>
+                        @endif
+                    </div>
+                @endif
+            </div>
             <!--快捷导航 开始-->
             <div class="result_content">
                 <div class="short_wrap">
-                    <a href="#"><i class="fa fa-plus"></i>新增文章</a>
-                    <a href="#"><i class="fa fa-recycle"></i>批量删除</a>
+                    <a href="{{ url('admin/category/create') }}"><i class="fa fa-plus"></i>添加分类</a>
+                    <a href="{{ url('admin/category') }}"><i class="fa fa-recycle"></i>所有分类</a>
                     <a href="{{ url('admin/category') }}"><i class="fa fa-refresh"></i>更新排序</a>
                 </div>
             </div>
@@ -71,8 +86,7 @@
                         <td>{{ $ele->cate_description }}</td>
                         <td>{{ $ele->cate_view }}</td>
                         <td>
-                            {{--<a href="{{ url('admin/category/'.$v->cate_id.'/edit') }}">修改</a>--}}
-                            <a href="{{url('admin/category/'.$v->cate_id.'/edit')}}">修改</a>
+                            <a href="{{url('admin/category/'.$ele->cate_id.'/edit')}}">修改</a>
                             <a href="javascript:;" onclick="delCate({{ $ele->cate_id }})">删除</a>
                         </td>
                     </tr>
@@ -130,7 +144,12 @@
                 btn: ['确定','取消'] //按钮
             }, function(){
                 $.post('{{ url('admin/category/') }}/'+cate_id,{'_method':'delete','_token':'{{ csrf_token() }}'},function (data) {
-
+                        if(data.status==0){
+                            location.href = location.href;//刷新当前页面
+                            layer.msg(data.msg, {icon: 6});
+                        }else{
+                            layer.msg(data.msg, {icon: 5});
+                        }
                 });
             }, function(){
                 layer.msg('也可以这样', {

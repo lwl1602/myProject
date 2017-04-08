@@ -25,7 +25,6 @@ class IndexController extends CommonController
     public function pass(){
         if($input = Input::all()){
             $rules = [                      //数据验证规则
-
                 //required： 密码不能为空  between: 密码在多少位之间控制范围 confirmed:验证是否一致
                 "password"=>'required|between:6,20|confirmed',
             ];

@@ -3,7 +3,7 @@
 @section('content')
 	<div class="top_box">
 		<div class="top_left">
-			<div class="logo">后台管理模板</div>
+			<div class="logo">分类后台管理</div>
 			<ul>
 				<li><a href="#" class="active">首页</a></li>
 				<li><a href="#">管理页</a></li>
@@ -25,8 +25,8 @@
 			<li>
 				<h3><i class="fa fa-fw fa-clipboard"></i>常用操作</h3>
 				<ul class="sub_menu">
-					<li><a href="add.html" target="main"><i class="fa fa-fw fa-plus-square"></i>添加页</a></li>
-					<li><a href="{{ url('admin/category') }}" target="main"><i class="fa fa-fw fa-list-ul"></i>列表页</a></li>
+					<li><a href="{{ url('admin/category') }}" target="main"><i class="fa fa-fw fa-plus-square"></i>分类管理</a></li>
+					<li><a href="{{ url('admin/article') }}" target="main"><i class="fa fa-fw fa-list-ul"></i>文章管理</a></li>
 					<li><a href="tab.html" target="main"><i class="fa fa-fw fa-list-alt"></i>tab页</a></li>
 					<li><a href="img.html" target="main"><i class="fa fa-fw fa-image"></i>图片列表</a></li>
 				</ul>

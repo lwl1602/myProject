@@ -9,6 +9,8 @@ class Category extends Model
     protected $table = 'category';
     protected $primaryKey = 'cate_id';
     public $timestamps=false;
+    protected $guarded = [];            //排除不能添加到数据库的字段，空表示都可以添加
+
 
     public function tree()
     {
