@@ -73,15 +73,18 @@
             <dt><i class="Hui-iconfont">&#xe616;</i> 首页管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="article-list.html" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
+                    <li><a data-href="{{ url('admin/index/show') }}" data-title="首页大图" href="javascript:void(0)">首页大图</a></li>
+                    <li><a data-href="{{ url('admin/link') }}" data-title="添加首页大图" href="javascript:void(0)">友情链接管理</a></li>
                 </ul>
             </dd>
         </dl>
         <dl id="menu-picture">
-            <dt><i class="Hui-iconfont">&#xe613;</i> 公司简介<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont">&#xe613;</i> 关于我们<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
+                    <li><a data-href="picture-list.html" data-title="公司简介" href="javascript:void(0)">公司简介</a></li>
+                    <li><a data-href="picture-list.html" data-title="团队简介" href="javascript:void(0)">团队简介</a></li>
+                    <li><a data-href="picture-list.html" data-title="联系我们" href="javascript:void(0)">联系我们</a></li>
                 </ul>
             </dd>
         </dl>
@@ -89,9 +92,7 @@
             <dt><i class="Hui-iconfont">&#xe620;</i> 新闻管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
-                    <li><a data-href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>
-                    <li><a data-href="product-list.html" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
+                    <li><a data-href="{{ url('admin/news') }}" data-title="新闻列表" href="javascript:void(0)">新闻列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -146,7 +147,7 @@
             <dt><i class="Hui-iconfont">&#xe62e;</i> 管理员设置<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="{{ url('admin/adminlist') }}" data-title="修改密码" href="javascript:void(0)">管理员列表</a></li>
+                    <li><a data-href="{{ url('admin/adminlist') }}" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
                 </ul>
             </dd>
         </dl>

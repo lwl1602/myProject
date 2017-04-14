@@ -22,25 +22,30 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('admin/code', 'Admin\LoginController@code');
 });
 
-/*
-Route::get('admin/index','Admin\IndexController@index');
-Route::get('admin/info','Admin\IndexController@info');
-Route::get('admin/quit','Admin\LoginController@quit');*/
 
 Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace'=>'Admin'], function () {
     Route::get('index','IndexController@index');
-    Route::get('adminlist','IndexController@adminList');
-    Route::get('index/backimage','IndexController@backgroundImage');
+    Route::any('adminlist','IndexController@adminList');
+    Route::any('admincreate','IndexController@adminCreate');
+    Route::any('adminstore','IndexController@store');
 
-    Route::get('info','IndexController@info');
+    Route::any('pass/{user_id}','IndexController@pass');
+    Route::any('delete/{user_id}','IndexController@delete');
     Route::get('quit','LoginController@quit');
-    Route::any('pass','IndexController@pass');
-    Route::any('cate/changeorder','CategoryController@changeorder');
+    
+    Route::any('index/upload','CommonController@upload');       //图片上传
+    
+    Route::get('index/picture','HomePageController@index');
+    Route::get('index/addimg','HomePageController@add');
+    Route::post('index/create','HomePageController@create');
+    Route::get('index/show','HomePageController@show');
+    Route::post('index/delete/{id}','HomePageController@destroy');
+    Route::get('index/showimg','HomePageController@showImage');
+    Route::post('index/edittype/{id}','HomePageController@editType');
 
-    Route::resource('category','CategoryController');
-    Route::resource('article','ArticleController');
-
-    Route::any('upload','CommonController@upload');
+    Route::resource('link','LinkController');
+    Route::resource('news','NewsController');
+    Route::get('news/demo','NewsController@demo');
 });
 
 

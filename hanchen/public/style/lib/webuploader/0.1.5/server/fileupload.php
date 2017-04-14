@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 
 if ( !empty($_REQUEST[ 'debug' ]) ) {
-    $random = rand(0, intval($_REQUEST[ 'debug' ]) );
+    $random = rand(0, intval($_REQUEST[ 'debug' ]) );       //获取变量的整数值
     if ( $random === 0 ) {
         header("HTTP/1.0 500 Internal Server Error");
         exit;
@@ -55,8 +55,8 @@ if ( !empty($_REQUEST[ 'debug' ]) ) {
 
 // Settings
 // $targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload";
-$targetDir = 'upload_tmp';
-$uploadDir = 'upload';
+$targetDir = 'upload_tmp';      //文件名
+$uploadDir = 'upload';          //文件名
 
 $cleanupTargetDir = true; // Remove old files
 $maxFileAge = 5 * 3600; // Temp file age in seconds
@@ -95,7 +95,7 @@ if ($cleanupTargetDir) {
         die('{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "Failed to open temp directory."}, "id" : "id"}');
     }
 
-    while (($file = readdir($dir)) !== false) {
+    while (($file = readdir($dir)) !== false) {     //readdir() 返回目录中下一个文件的文件名
         $tmpfilePath = $targetDir . DIRECTORY_SEPARATOR . $file;
 
         // If temp file is current file proceed to the next
@@ -104,7 +104,7 @@ if ($cleanupTargetDir) {
         }
 
         // Remove temp file if it is older than the max age and is not the current file
-        if (preg_match('/\.(part|parttmp)$/', $file) && (@filemtime($tmpfilePath) < time() - $maxFileAge)) {
+        if (preg_match('/\.(part|parttmp)$/', $file) && (@filemtime($tmpfilePath) < time() - $maxFileAge)) {        //preg_match() 执行一条正则表达式
             @unlink($tmpfilePath);
         }
     }
@@ -113,12 +113,12 @@ if ($cleanupTargetDir) {
 
 
 // Open temp file
-if (!$out = @fopen("{$filePath}_{$chunk}.parttmp", "wb")) {
+if (!$out = @fopen("{$filePath}_{$chunk}.parttmp", "wb")) {     //fopen打开文件或url
     die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');
 }
 
 if (!empty($_FILES)) {
-    if ($_FILES["file"]["error"] || !is_uploaded_file($_FILES["file"]["tmp_name"])) {
+    if ($_FILES["file"]["error"] || !is_uploaded_file($_FILES["file"]["tmp_name"])) {   // 判断文件是否是通过 HTTP POST 上传的
         die('{"jsonrpc" : "2.0", "error" : {"code": 103, "message": "Failed to move uploaded file."}, "id" : "id"}');
     }
 

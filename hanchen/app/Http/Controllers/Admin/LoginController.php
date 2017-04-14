@@ -19,12 +19,13 @@ class LoginController extends CommonController
             if(strtoupper($input['code']) != $_code){
                 return back()->with('msg','验证码错误');      //返回到请求页面,后面加with调教验证码
             }
-            $user = User::first();
-            if($user->user_name != $input['user_name'] || Crypt::decrypt($user->user_pass)!= $input['user_pass']){
-                return back()->with('msg','用户名或者密码错误！');
+            if($user = User::where('user_name',$input['user_name'])->first()){
+                if(Crypt::decrypt($user->user_pass)!= $input['user_pass']){
+                    return back()->with('msg','用户名或者密码错误！');
+                }
             }
             session(['user'=>$user]);
-            return redirect('admin/index')->with('user',$user);
+            return redirect('admin/index');
         }else{
             //dd($_SERVER); 查看电脑配置信息
             return view('admin.login');
