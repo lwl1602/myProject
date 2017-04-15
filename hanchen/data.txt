@@ -10,3 +10,9 @@
 链接名 link_name
 链接url link_url
 链接描述    link_describe
+
+
+新闻表     hc_news
+主键       news_id
+新闻标题    news_title
+新闻内容    news_content

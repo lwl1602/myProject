@@ -16,11 +16,25 @@
 		var editor;
 		KindEditor.ready(function(K) {
 			editor = K.create('textarea[name="content"]', {
-				allowFileManager : true
+				allowFileManager: true
 			});
 			K('input[name=submit]').click(function(e) {
+				alert(editor.html());
 				document.getElementById('html').value = editor.html();
 				document.getElementById('text').value = editor.text();
+				$.ajax({
+					type: "GET",
+					url: '{{ url('admin/news/'.$news->news_id.'/edit') }}',
+					data:$('#form-admin-role-add').serialize(),// 要提交的表单
+					success: function(data){
+						if(data != null || data != ''){
+							layer.msg(data.msg,{icon:1,time:1000});
+						}
+					},
+					error:function(data) {
+						console.log(data.msg);
+					},
+				});
 			});
 		});
 	</script>
@@ -39,17 +53,17 @@
 			@endif
 		</div>
 	@endif
-	<form action="{{ url('admin/news') }}" method="post" class="form form-horizontal" id="form-admin-role-add">
+	<form action="{{ url('admin/news/'.$news->news_id.'/edit')}}" method="get" class="form form-horizontal" id="form-admin-role-add">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>新闻标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ old('name') }}" class="input-text">
+				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ $news->news_title }}" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">新闻内容：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ old('content') }}</textarea>
+				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ $news->news_content }}</textarea>
 				<input type="hidden" name="html" id="html" value="">
 				<input type="hidden" name="text" id="text" value="">
 				{{--<textarea name="link_describe" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符，最多200字" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">{{ old('link_describe') }}</textarea>
@@ -58,7 +72,7 @@
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-				<input class="btn btn-primary radius" type="submit" name="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;">
+				<input class="btn btn-primary radius" type="button" name="submit" value="&nbsp;&nbsp;修&nbsp;&nbsp;改&nbsp;&nbsp;">
 			</div>
 		</div>
 	</form>

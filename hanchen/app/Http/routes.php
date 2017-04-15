@@ -45,7 +45,10 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
 
     Route::resource('link','LinkController');
     Route::resource('news','NewsController');
-    Route::get('news/demo','NewsController@demo');
+});
+
+Route::group(['middleware' => ['web','enterprise'],'prefix'=>'enterprise','namespace'=>'Enterprise'], function () {
+    Route::any('news/{id}','NewsController@show');
 });
 
 
