@@ -41,9 +41,11 @@
 				</div>
 			</div>
 		</div>
-        <div class="cl pd-5 bg-1 bk-gray mt-20">
-             <span class="l"><a class="btn btn-secondary radius" href="{{ url('admin/index/show') }}">返回主页</a></span>
-             <input id="submit" class="btn btn-primary radius" type="submit" disabled="true" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;">
+        <div class="row cl">
+                <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                    <a class="btn btn-primary radius" href="{{ url('admin/index/show') }}" name="submit">&nbsp;返&nbsp;回&nbsp;列&nbsp;表&nbsp;</a>
+                    <input class="btn btn-primary radius" type="submit" name="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;">
+                </div>
         </div>
 	</form>
 </div>

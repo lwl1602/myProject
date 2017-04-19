@@ -14,6 +14,7 @@
 				<th width="40">ID</th>
 				<th width="200">新闻标题</th>
 				<th >新闻内容</th>
+				<th width="200">上传时间</th>
 				<th width="70">操作</th>
 			</tr>
 		</thead>
@@ -24,6 +25,7 @@
 				<td>{{ $i+1 }}</td>
 				<td>{{ $newses[$i]->news_title }}</td>
 				<td>{{ html_entity_decode($newses[$i]->news_text) }}</td>
+				<td>{{ $newses[$i]->news_time }}</td>
 				<td class="f-14"><a title="编辑" href="{{ url('admin/news/'.$newses[$i]->news_id) }}" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_role_del(this,'{{ $newses[$i]->news_id }}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 			</tr>
 			@endfor
@@ -44,7 +46,7 @@ function admin_role_edit(title,url,id,w,h){
 }
 /*管理员-角色-删除*/
 function admin_role_del(obj,id){
-	layer.confirm('角色删除须谨慎，确认要删除吗？',function(index){
+	layer.confirm('删除须谨慎，确认要删除吗？',function(index){
 		$.ajax({
 			type: 'delete',
 			url: '{{ url('admin/news') }}/'+id,

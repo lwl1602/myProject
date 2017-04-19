@@ -16,3 +16,58 @@
 主键       news_id
 新闻标题    news_title
 新闻内容    news_content
+
+业务领域    hc_business
+主键      bus_id
+图片地址  bus_url
+业务标题    bus_title
+业务内容    bus_content
+业务html    bus_html
+业务text    bus_text
+业务类型    bc_id
+
+成功案例     hc_successfulcase
+主键      sf_id
+图片地址  sf_url
+案例标题    sf_title
+案例内容    sf_content
+案例html    sf_html
+案例text    sf_text
+案例类型    bc_id
+
+公司简介    hc_companyprofile
+主键          cp_id
+图片地址        cd_url
+简介内容        cd_content
+上传时间        cd_time
+
+团队简介    hc_teamprofile
+主键          tp_id
+头像图片      tp_url
+姓名          tp_name
+职业          tp_profession
+学历          tp_education
+工作经历      tp_workexperience
+业务范围      tp_scope
+职业范围      tp_jobs
+行业兼职      tp_parttime
+联系地址      tp_site
+邮编          tp_postcode
+电话          tp_phone
+传真          tp_faxes
+
+联系我们      hc_contact
+主键          contact_id
+地址图片        contact_imgurl
+公司名字        contact_name
+公司地址        contact_site
+公司编码        contact_postcode
+电话：          contact_phone
+传真：          contact_faxes
+电子邮箱        contact_email
+网址            contact_url
+
+
+
+
+

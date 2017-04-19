@@ -39,17 +39,17 @@
 			@endif
 		</div>
 	@endif
-	<form action="{{ url('admin/news/'.$news->news_id.'/edit')}}" method="get" class="form form-horizontal" id="form-admin-role-add">
+	<form action="{{ url('admin/laws/edit/'.$laws->laws_id)}}" method="post" class="form form-horizontal" id="form-admin-role-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>新闻标题：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>法规标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ $news->news_title }}" class="input-text">
+				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ $laws->laws_title }}" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">新闻内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">法规内容：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ $news->news_content }}</textarea>
+				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ $laws->laws_content }}</textarea>
 				<input type="hidden" name="html" id="html" value="">
 				<input type="hidden" name="text" id="text" value="">
 				{{--<textarea name="link_describe" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符，最多200字" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">{{ old('link_describe') }}</textarea>
@@ -58,7 +58,7 @@
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<a class="btn btn-primary radius" href="{{ url('admin/news') }}" name="submit">&nbsp;返&nbsp;回&nbsp;列&nbsp;表&nbsp;</a>
+				<a class="btn btn-primary radius" href="{{ url('admin/laws') }}" name="submit">&nbsp;返&nbsp;回&nbsp;列&nbsp;表&nbsp;</a>
 				<input class="btn btn-primary radius" type="submit" name="submit" value="&nbsp;&nbsp;修&nbsp;&nbsp;改&nbsp;&nbsp;">
 			</div>
 		</div>

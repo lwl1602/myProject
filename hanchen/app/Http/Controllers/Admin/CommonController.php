@@ -120,4 +120,15 @@ class CommonController extends Controller
             @fclose($out);
         }
     }
+
+    //将图片存入到本地
+    public function uploadImg($path,$file,$tempFile){
+        $new_file_name = time() . mt_rand(10000, 99999) . strrchr($file, '.');
+        if (!file_exists($path)) {
+            @mkdir($path);
+        }
+        $url = $path.DIRECTORY_SEPARATOR.$new_file_name;
+        move_uploaded_file($tempFile, $path .DIRECTORY_SEPARATOR.$new_file_name);
+        return $url;
+    }
 }

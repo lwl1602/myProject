@@ -16,7 +16,7 @@
 		var editor;
 		KindEditor.ready(function(K) {
 			editor = K.create('textarea[name="content"]', {
-				allowFileManager: true
+				allowFileManager : true
 			});
 			K('input[name=submit]').click(function(e) {
 				document.getElementById('html').value = editor.html();
@@ -27,7 +27,8 @@
 	@stop
 
 @section('content')
-<article class="page-container">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 相关法规管理 <span class="c-gray en">&gt;</span> 添加法规<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	<article class="page-container">
 	@if(count($errors) > 0)
 		<div class="Huialert Huialert-danger">
 			@if(is_object($errors))
@@ -39,17 +40,17 @@
 			@endif
 		</div>
 	@endif
-	<form action="{{ url('admin/news/'.$news->news_id.'/edit')}}" method="get" class="form form-horizontal" id="form-admin-role-add">
+	<form action="{{ url('admin/laws') }}" method="post" class="form form-horizontal" id="form-admin-role-add">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>新闻标题：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>法规标题：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ $news->news_title }}" class="input-text">
+				<input type="text" name="title" id="" placeholder="显示在主界面信息" value="{{ old('name') }}" class="input-text">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">新闻内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">法规内容：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ $news->news_content }}</textarea>
+				<textarea name="content" style="width:800px;height:400px;visibility:hidden;">{{ old('content') }}</textarea>
 				<input type="hidden" name="html" id="html" value="">
 				<input type="hidden" name="text" id="text" value="">
 				{{--<textarea name="link_describe" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符，最多200字" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)">{{ old('link_describe') }}</textarea>
@@ -58,8 +59,8 @@
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<a class="btn btn-primary radius" href="{{ url('admin/news') }}" name="submit">&nbsp;返&nbsp;回&nbsp;列&nbsp;表&nbsp;</a>
-				<input class="btn btn-primary radius" type="submit" name="submit" value="&nbsp;&nbsp;修&nbsp;&nbsp;改&nbsp;&nbsp;">
+				<a class="btn btn-primary radius" href="{{ url('admin/laws') }}" name="submit">&nbsp;返&nbsp;回&nbsp;列&nbsp;表&nbsp;</a>
+				<input class="btn btn-primary radius" type="submit" name="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;">
 			</div>
 		</div>
 	</form>

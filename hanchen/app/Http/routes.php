@@ -45,6 +45,23 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
 
     Route::resource('link','LinkController');
     Route::resource('news','NewsController');
+    Route::resource('laws','LawsController');
+    Route::resource('bc','BCController');
+    Route::resource('bus','BusinessController');
+    Route::resource('sc','SuccessfulCaseController');
+    Route::resource('tp','TeamProfileController');
+    Route::get('tp/member/{id}','TeamProfileController@member');
+    Route::post('tp/edit/{id}','TeamProfileController@edit');
+
+    Route::post('laws/edit/{id}','LawsController@edit');
+    Route::post('bus/edit/{id}','BusinessController@edit');
+    Route::post('sc/edit/{id}','SuccessfulCaseController@edit');
+
+    Route::get('cp/index','CompanyProfileController@index');
+    Route::post('cp/edit','CompanyProfileController@edit');
+
+    Route::get('contact/index','ContactController@index');
+    Route::post('contact/edit','ContactController@edit');
 });
 
 Route::group(['middleware' => ['web','enterprise'],'prefix'=>'enterprise','namespace'=>'Enterprise'], function () {

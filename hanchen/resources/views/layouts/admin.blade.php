@@ -82,9 +82,9 @@
             <dt><i class="Hui-iconfont">&#xe613;</i> 关于我们<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="picture-list.html" data-title="公司简介" href="javascript:void(0)">公司简介</a></li>
-                    <li><a data-href="picture-list.html" data-title="团队简介" href="javascript:void(0)">团队简介</a></li>
-                    <li><a data-href="picture-list.html" data-title="联系我们" href="javascript:void(0)">联系我们</a></li>
+                    <li><a data-href="{{ url('admin/cp/index') }}" data-title="公司简介" href="javascript:void(0)">公司简介</a></li>
+                    <li><a data-href="{{ url('admin/tp') }}" data-title="团队简介" href="javascript:void(0)">团队简介</a></li>
+                    <li><a data-href="{{ url('admin/contact/index') }}" data-title="联系我们" href="javascript:void(0)">联系我们</a></li>
                 </ul>
             </dd>
         </dl>
@@ -100,8 +100,8 @@
             <dt><i class="Hui-iconfont">&#xe622;</i> 业务领域<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="http://h-ui.duoshuo.com/admin/" data-title="评论列表" href="javascript:;">评论列表</a></li>
-                    <li><a data-href="feedback-list.html" data-title="意见反馈" href="javascript:void(0)">意见反馈</a></li>
+                    <li><a data-href="{{ url('admin/bc') }}" data-title="评论列表" href="javascript:;">业务分类列表</a></li>
+                    <li><a data-href="{{ url('admin/bus') }}" data-title="意见反馈" href="javascript:void(0)">业务列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -109,13 +109,7 @@
             <dt><i class="Hui-iconfont">&#xe60d;</i> 相关法规<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="member-list.html" data-title="会员列表" href="javascript:;">会员列表</a></li>
-                    <li><a data-href="member-del.html" data-title="删除的会员" href="javascript:;">删除的会员</a></li>
-                    <li><a data-href="member-level.html" data-title="等级管理" href="javascript:;">等级管理</a></li>
-                    <li><a data-href="member-scoreoperation.html" data-title="积分管理" href="javascript:;">积分管理</a></li>
-                    <li><a data-href="member-record-browse.html" data-title="浏览记录" href="javascript:void(0)">浏览记录</a></li>
-                    <li><a data-href="member-record-download.html" data-title="下载记录" href="javascript:void(0)">下载记录</a></li>
-                    <li><a data-href="member-record-share.html" data-title="分享记录" href="javascript:void(0)">分享记录</a></li>
+                    <li><a data-href="{{ url('admin/laws') }}" data-title="法规列表" href="javascript:;">法规列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -123,9 +117,7 @@
             <dt><i class="Hui-iconfont">&#xe62d;</i> 成功案例<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="admin-role.html" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
-                    <li><a data-href="admin-permission.html" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
-                    <li><a data-href="admin-list.html" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+                    <li><a data-href="{{ url('admin/sc') }}" data-title="角色管理" href="javascript:void(0)">案例管理</a></li>
                 </ul>
             </dd>
         </dl>
